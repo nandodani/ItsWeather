@@ -60,7 +60,7 @@ function App() {
           <IonCol size="6">
             <IonCard>
               <IonCardHeader>
-                <IonCardTitle>vis</IonCardTitle>
+                <IonCardTitle>GM</IonCardTitle>
               </IonCardHeader>
 
               <IonCardContent>Dados da Visibilidade</IonCardContent>
