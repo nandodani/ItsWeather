@@ -1,36 +1,35 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
-import { ReactComponent as Cloudy } from "../../images/Cloudy.svg";
+import React, { useEffect, useState } from "react";
+import { useApi } from "../../utils/WeatherDataContext";
+import { ReactComponent as Cloudy } from "../../assets/images/Cloudy.svg";
 import "./Weather.styles.css";
 
 function Weather() {
-  const [temperature, setTemperature] = useState(null);
-
-  const temperatureRounded = Math.round(temperature);
-
-  var today = new Date(),
-    time = today.getHours();
+  const apiData = useApi();
+  const [time, setTime] = useState(null);
 
   useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await axios.get(
-          "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m,relativehumidity_2m,weathercode,visibility,windspeed_10m,uv_index&timezone=auto"
-        );
-        console.log(response.data);
-        setTemperature(response.data.hourly.temperature_2m[time]);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    }
-
-    fetchData();
+    const today = new Date();
+    const currentTime = today.getHours();
+    setTime(currentTime);
+    console.log(currentTime);
   }, []);
+
+  const temperature =
+    apiData &&
+    apiData.hourly &&
+    apiData.hourly.temperature_2m &&
+    apiData.hourly.temperature_2m[time]
+      ? Math.round(apiData.hourly.temperature_2m[time])
+      : null;
 
   return (
     <>
       <Cloudy className="image-weather" />
-      <h1 className="temperature">{temperatureRounded}</h1>
+      {temperature !== null ? (
+        <h1 className="temperature">{temperature}</h1>
+      ) : (
+        <p>Loading...</p>
+      )}
     </>
   );
 }
