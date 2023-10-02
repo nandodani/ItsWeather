@@ -26,10 +26,12 @@
 ## Features and Functionality
 
 - View current weather conditions. ✅
-- Weather forecast for the upcoming days. 🔜
-- Details such as temperature, humidity, and wind speed. ✅
+- Weather forecast for the upcoming days. ✅
+- Details such as temperature, humidity, UV Index and wind speed. ✅
 - Add up to 5 locations 🔜
 - UI Animations 🔜
+- Settings Menu 🔜
+- Welcome tutorial 🔜
 
 ## Usage Instructions
 
