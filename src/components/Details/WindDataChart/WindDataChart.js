@@ -6,7 +6,7 @@ import {
   IonCardContent,
 } from "@ionic/react";
 import Chart from "chart.js/auto";
-import { Line } from "react-chartjs-2"; // Importe o componente Line de react-chartjs-2
+import { Line } from "react-chartjs-2";
 import { useApi } from "../../../utils/WeatherDataContext";
 
 function WindDataChart() {
@@ -37,7 +37,7 @@ function WindDataChart() {
     labels: windData ? Array.from({ length: windData.length }, (_, i) => {
       const hour = (time + i) % 24;
       return `${hour}h`;
-    }) : [], // Verifica se windData é definido antes de criar os rótulos
+    }) : [],
     datasets: [
       {
         data: windData,

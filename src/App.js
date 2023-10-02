@@ -16,10 +16,10 @@ function App() {
       <div
         className="App"
         style={{
+          paddingTop: "env(safe-area-inset-top",
           paddingBottom: "env(safe-area-inset-bottom)",
         }}
       >
-        <Toolbar />
         <h3 className="welcome">Bom-dia, Nome!</h3>
         <div className="main">
           <div className="container">

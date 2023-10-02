@@ -1,12 +1,14 @@
 import React from "react";
 import { IonItem, IonMenu, IonList, IonIcon } from "@ionic/react";
+import { settings } from 'ionicons/icons';
+
 
 const SettingsMenu = () => {
   return (
     <IonMenu>
       <IonList>
         <IonItem>
-          <IonIcon name="settings" />
+          <IonIcon name={settings} />
           Configurações
         </IonItem>
       </IonList>

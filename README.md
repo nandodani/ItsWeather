@@ -17,12 +17,19 @@
 - [Open-Meteo API](https://open-meteo.com/)
 - [CapacitorJS](https://capacitorjs.com/) (for iOS and Android app creation)
 
+## Platforms
+- iOS 🍏
+- Android 👽
+- Web 🌐
+
+
 ## Features and Functionality
 
-- View current weather conditions.
-- Weather forecast for the upcoming days.
-- Details such as temperature, humidity, and wind speed.
-- User-friendly and easy-to-use interface.
+- View current weather conditions. ✅
+- Weather forecast for the upcoming days. 🔜
+- Details such as temperature, humidity, and wind speed. ✅
+- Add up to 5 locations 🔜
+- UI Animations 🔜
 
 ## Usage Instructions
 

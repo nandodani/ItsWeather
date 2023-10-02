@@ -10,6 +10,7 @@ import {
   IonCardContent,
 } from "@ionic/react";
 import WindDataChart from "./WindDataChart/WindDataChart";
+import SevenDaysForecast from "./SevenDaysForecast/SevenDaysForecast.js";
 import { useApi } from "../../utils/WeatherDataContext";
 import UvIndex from "./UvIndex/UvIndex";
 
@@ -46,7 +47,7 @@ function Details() {
       <h2>Details</h2>
       <IonGrid>
         <IonRow>
-          <IonCol size="6">
+          <IonCol>
             <IonCard>
               <IonCardHeader>
                 <IonCardTitle className="card-title">Visibilidade</IonCardTitle>
@@ -58,7 +59,7 @@ function Details() {
               </IonCardContent>
             </IonCard>
           </IonCol>
-          <IonCol size="6">
+          <IonCol>
             <IonCard>
               <IonCardHeader>
                 <IonCardTitle className="card-title">Humidade</IonCardTitle>
@@ -70,22 +71,22 @@ function Details() {
           </IonCol>
         </IonRow>
         <IonRow>
-          <IonCol size="12">
+          <IonCol>
             <WindDataChart />
           </IonCol>
         </IonRow>
         <IonRow>
-          <IonCol size="12">
+          <IonCol>
             <UvIndex />
           </IonCol>
         </IonRow>
         <IonRow>
-          <IonCol size="12">
-            <IonCard>
+          <IonCol>
+            <IonCard className="seven-days">
               <IonCardHeader>
-                <IonCardTitle className="card-title">Next 7 Days</IonCardTitle>
+                <IonCardTitle className="card-title">7 Days Forecast</IonCardTitle>
               </IonCardHeader>
-              <IonCardContent>Graphic with data</IonCardContent>
+              <SevenDaysForecast />
             </IonCard>
           </IonCol>
         </IonRow>
