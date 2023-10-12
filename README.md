@@ -1,6 +1,6 @@
 # It's Weather!
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot-its-weather.png)
 
 ## Description
 
