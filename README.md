@@ -1,6 +1,6 @@
 # It's Weather!
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot-its-weather.png)
 
 ## Description
 
@@ -52,6 +52,6 @@ npm start
 ```
 ## Contact
 🙋🏻‍♂️ Name: Fernando Apóstolo \
-📫 Email: nando.apostolo.fd@gmail.com \
-💼 LinkedIn: http://www.linkedin.com/in/fernando-apostolo \
-🌐 Website: http://www.nandodani.github.io
+📫 Email: fernandodaniel.work@gmail.com \
+💼 LinkedIn: https://www.linkedin.com/in/fernando-apostolo \
+🌐 Website: https://nandodani.github.io
