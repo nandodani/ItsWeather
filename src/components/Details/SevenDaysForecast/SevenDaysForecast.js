@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { IonCardContent, IonGrid, IonRow, IonCol } from "@ionic/react";
 import { useApi } from "../../../utils/WeatherDataContext";
 import {
+  IconCalendarDue,
   IconCloud,
   IconCloudBolt,
   IconCloudFog,
@@ -113,7 +114,9 @@ function ForecastWeather() {
 
   return (
     <>
-      <h3 style={{ textAlign: "center" }}>Próximos 7 Dias</h3>
+      <h3 className="title-details">
+        <IconCalendarDue /> Próximos 7 Dias
+      </h3>
       <IonGrid style={{ width: "100%", textAlign: "center" }}>
         <IonRow>
           {next7Days.map((day, index) => (

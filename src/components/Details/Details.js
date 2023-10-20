@@ -5,7 +5,7 @@ import WindDataChart from "./WindDataChart/WindDataChart";
 import SevenDaysForecast from "./SevenDaysForecast/SevenDaysForecast.js";
 import { useApi } from "../../utils/WeatherDataContext";
 import UvIndex from "./UvIndex/UvIndex";
-import { IconEye } from "@tabler/icons-react";
+import { IconDroplet, IconEye } from "@tabler/icons-react";
 
 function Details() {
   const apiData = useApi();
@@ -49,7 +49,7 @@ function Details() {
           </IonCol>
           <IonCol>
             <div className="title-details" id="open-modal" expand="block">
-              <IconEye />
+              <IconDroplet />
               <h3>Humidade</h3>
             </div>
             {humidity ? humidity + " " + humidityUnit : "Carregando..."}
