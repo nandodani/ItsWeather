@@ -1,18 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./Details.styles.css";
-import {
-  IonCol,
-  IonGrid,
-  IonRow,
-  IonCard,
-  IonCardHeader,
-  IonCardTitle,
-  IonCardContent,
-} from "@ionic/react";
+import { IonCol, IonGrid, IonRow } from "@ionic/react";
 import WindDataChart from "./WindDataChart/WindDataChart";
 import SevenDaysForecast from "./SevenDaysForecast/SevenDaysForecast.js";
 import { useApi } from "../../utils/WeatherDataContext";
 import UvIndex from "./UvIndex/UvIndex";
+import { IconEye } from "@tabler/icons-react";
 
 function Details() {
   const apiData = useApi();
@@ -48,11 +41,17 @@ function Details() {
       <IonGrid>
         <IonRow>
           <IonCol>
-            <h3>Visibilidade</h3>
+            <div className="title-details" id="open-modal" expand="block">
+              <IconEye />
+              <h3>Visibilidade</h3>
+            </div>
             {visibility ? visibility + " " + visibilityUnit : "Carregando..."}
           </IonCol>
           <IonCol>
-            <h3>Humidade</h3>
+            <div className="title-details" id="open-modal" expand="block">
+              <IconEye />
+              <h3>Humidade</h3>
+            </div>
             {humidity ? humidity + " " + humidityUnit : "Carregando..."}
           </IonCol>
         </IonRow>

@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from "react";
-import {
-  IonCard,
-  IonCardHeader,
-  IonCardTitle,
-  IonCardContent,
-} from "@ionic/react";
 import Chart from "chart.js/auto";
 import { Line } from "react-chartjs-2";
 import { useApi } from "../../../utils/WeatherDataContext";
+import { IconWind } from "@tabler/icons-react";
 
 function WindDataChart() {
   const [time, setTime] = useState(null);
@@ -83,7 +78,10 @@ function WindDataChart() {
 
   return (
     <>
-      <h3>Vento</h3>
+      <div className="title-details">
+        <IconWind />
+        <h3>Vento</h3>
+      </div>
       <Line data={chartData} options={chartOptions} height={200} width={500} />
     </>
   );

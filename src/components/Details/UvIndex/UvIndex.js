@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from "react";
-import {
-  IonCard,
-  IonCardHeader,
-  IonCardTitle,
-  IonCardContent,
-} from "@ionic/react";
 import { useApi } from "../../../utils/WeatherDataContext";
+import { IconUvIndex } from "@tabler/icons-react";
+
 
 function UVIndexCard() {
   const apiData = useApi();
@@ -60,9 +56,17 @@ function UVIndexCard() {
 
   const uvInfo = getUVColor(UVIndex);
 
+
+
   return (
     <>
-      <h3>UV</h3>
+      <div
+        id="open-modal"
+        className="title-details"
+      >
+        <IconUvIndex />
+        <h3>UV</h3>
+      </div>
       <div
         style={{
           fontSize: "2rem",
@@ -73,6 +77,7 @@ function UVIndexCard() {
         {UVIndex}
       </div>
       {uvInfo.label}
+
     </>
   );
 }

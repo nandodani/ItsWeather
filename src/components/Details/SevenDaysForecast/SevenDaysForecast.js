@@ -114,7 +114,7 @@ function ForecastWeather() {
   return (
     <>
       <h3 style={{ textAlign: "center" }}>Próximos 7 Dias</h3>
-      <IonGrid style={{ width: "90vw", textAlign: "center" }}>
+      <IonGrid style={{ width: "100%", textAlign: "center" }}>
         <IonRow>
           {next7Days.map((day, index) => (
             <IonCol key={index}>{day}</IonCol>
