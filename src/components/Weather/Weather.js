@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useApi } from "../../utils/WeatherDataContext";
-import { ReactComponent as Cloudy } from "../../assets/images/Cloudy.svg";
 import "./Weather.styles.css";
 
 function Weather() {
@@ -24,12 +23,16 @@ function Weather() {
 
   return (
     <>
-      <Cloudy className="image-weather" />
-      {temperature !== null ? (
-        <h1 className="temperature">{temperature}</h1>
-      ) : (
-        <p>Loading...</p>
-      )}
+      <div className="weather">
+        {temperature !== null ? (
+          <p className="temperature">
+            {temperature}
+            <span className="unit">º</span>
+          </p>
+        ) : (
+          <p>Loading...</p>
+        )}
+      </div>
     </>
   );
 }

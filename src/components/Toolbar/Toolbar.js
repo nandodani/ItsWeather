@@ -4,25 +4,23 @@ import {
   IonToolbar,
   IonButton,
   IonButtons,
-  IonIcon,
+  IonTitle,
 } from "@ionic/react";
-import { cogOutline } from "ionicons/icons";
 import SettingsMenu from "../SettingsMenu/SettingsMenu";
+import { IconMenu } from "@tabler/icons-react";
 
 const Toolbar = () => {
-
   return (
     <>
-      <IonHeader translucent={true}>
-       <IonToolbar>
+        <IonToolbar>
           <IonButtons slot="start">
             <IonButton onClick={() => console.log("Settings")}>
-              <IonIcon icon={cogOutline} />
+              <IconMenu style={{ color: "white" }}/>
             </IonButton>
           </IonButtons>
+          <IonTitle style={{ fontFamily: "Satoshi-Variable" }}>Cidade</IonTitle>
         </IonToolbar>
-          <SettingsMenu />
-      </IonHeader>
+        <SettingsMenu />
     </>
   );
 };

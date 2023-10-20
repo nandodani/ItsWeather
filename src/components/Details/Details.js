@@ -48,26 +48,12 @@ function Details() {
       <IonGrid>
         <IonRow>
           <IonCol>
-            <IonCard>
-              <IonCardHeader>
-                <IonCardTitle className="card-title">Visibilidade</IonCardTitle>
-              </IonCardHeader>
-              <IonCardContent>
-                {visibility
-                  ? visibility + " " + visibilityUnit
-                  : "Carregando..."}
-              </IonCardContent>
-            </IonCard>
+            <h3>Visibilidade</h3>
+            {visibility ? visibility + " " + visibilityUnit : "Carregando..."}
           </IonCol>
           <IonCol>
-            <IonCard>
-              <IonCardHeader>
-                <IonCardTitle className="card-title">Humidade</IonCardTitle>
-              </IonCardHeader>
-              <IonCardContent>
-                {humidity ? humidity + " " + humidityUnit : "Carregando..."}
-              </IonCardContent>
-            </IonCard>
+            <h3>Humidade</h3>
+            {humidity ? humidity + " " + humidityUnit : "Carregando..."}
           </IonCol>
         </IonRow>
         <IonRow>
@@ -82,12 +68,7 @@ function Details() {
         </IonRow>
         <IonRow>
           <IonCol>
-            <IonCard className="seven-days">
-              <IonCardHeader>
-                <IonCardTitle className="card-title">7 Days Forecast</IonCardTitle>
-              </IonCardHeader>
-              <SevenDaysForecast />
-            </IonCard>
+            <SevenDaysForecast />
           </IonCol>
         </IonRow>
       </IonGrid>

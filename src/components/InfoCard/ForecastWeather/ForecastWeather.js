@@ -1,25 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { IonCardContent, IonGrid, IonRow, IonCol } from "@ionic/react";
 import { useApi } from "../../../utils/WeatherDataContext";
-import { ReactComponent as Cloudy } from "../../../assets/images/Cloudy.svg";
-import { ReactComponent as PartiallyCloudy } from "../../../assets/images/Cloudy.svg";
-import { ReactComponent as Sunny } from "../../../assets/images/Cloudy.svg";
-import { ReactComponent as Fog } from "../../../assets/images/Cloudy.svg";
-import { ReactComponent as Drizzle } from "../../../assets/images/Cloudy.svg";
-import { ReactComponent as DenseDrizzle } from "../../../assets/images/Cloudy.svg";
-import { ReactComponent as LightFreezingDrizzle } from "../../../assets/images/Cloudy.svg";
-import { ReactComponent as DenseFreezingDrizzle } from "../../../assets/images/Cloudy.svg";
-import { ReactComponent as LightRain } from "../../../assets/images/Cloudy.svg";
-import { ReactComponent as HeavyRain } from "../../../assets/images/Cloudy.svg";
-import { ReactComponent as LightFreezingRain } from "../../../assets/images/Cloudy.svg";
-import { ReactComponent as HeavyFreezingRain } from "../../../assets/images/Cloudy.svg";
-import { ReactComponent as SlightSnowFall } from "../../../assets/images/Cloudy.svg";
-import { ReactComponent as ModerateSnowFall } from "../../../assets/images/Cloudy.svg";
-import { ReactComponent as HeavySnowFall } from "../../../assets/images/Cloudy.svg";
-import { ReactComponent as SnowGrains } from "../../../assets/images/Cloudy.svg";
-import { ReactComponent as RainShowers } from "../../../assets/images/Cloudy.svg";
-import { ReactComponent as SnowShowers } from "../../../assets/images/Cloudy.svg";
-import { ReactComponent as Thunderstorm } from "../../../assets/images/Cloudy.svg";
+import { IconCloud, IconCloudBolt, IconCloudFog, IconCloudRain, IconCloudSnow, IconSnowflake, IconSun } from "@tabler/icons-react";
+
 
 function ForecastWeather() {
   const [temperatureData, setTemperatureData] = useState([]);
@@ -65,58 +48,58 @@ function ForecastWeather() {
   function getWeatherIcon(weatherCode) {
     switch (weatherCode) {
       case 0:
-        return <Sunny style={{ width: "100%", height: "100%" }} />;
+        return <IconSun style={{ width: "75%", height: "75%" }} />;
       case 1:
       case 2:
-        return <PartiallyCloudy style={{ width: "100%", height: "100%" }} />;
+        return <IconCloud style={{ width: "75%", height: "75%" }} />;
       case 3:
       case 4:
-        return <Cloudy style={{ width: "100%", height: "100%" }} />;
+        return <IconCloud style={{ width: "75%", height: "75%" }} />;
       case 45:
       case 48:
-        return <Fog style={{ width: "100%", height: "100%" }} />;
+        return <IconCloudFog style={{ width: "75%", height: "75%" }} />;
       case 51:
       case 53:
-        return <Drizzle style={{ width: "100%", height: "100%" }} />;
+        return <IconCloudRain style={{ width: "75%", height: "75%" }} />;
       case 55:
-        return <DenseDrizzle style={{ width: "100%", height: "100%" }} />;
+        return <IconCloudRain style={{ width: "75%", height: "75%" }} />;
       case 56:
         return (
-          <LightFreezingDrizzle style={{ width: "100%", height: "100%" }} />
+          <IconCloudRain style={{ width: "75%", height: "75%" }} />
         );
       case 57:
         return (
-          <DenseFreezingDrizzle style={{ width: "100%", height: "100%" }} />
+          <IconCloudRain style={{ width: "75%", height: "75%" }} />
         );
       case 61:
       case 62:
       case 63:
-        return <LightRain style={{ width: "100%", height: "100%" }} />;
+        return <IconCloudRain style={{ width: "75%", height: "75%" }} />;
       case 65:
-        return <HeavyRain style={{ width: "100%", height: "100%" }} />;
+        return <IconCloudRain style={{ width: "75%", height: "75%" }} />;
       case 66:
-        return <LightFreezingRain style={{ width: "100%", height: "100%" }} />;
+        return <IconCloudRain style={{ width: "75%", height: "75%" }} />;
       case 67:
-        return <HeavyFreezingRain style={{ width: "100%", height: "100%" }} />;
+        return <IconCloudSnow style={{ width: "75%", height: "75%" }} />;
       case 71:
-        return <SlightSnowFall style={{ width: "100%", height: "100%" }} />;
+        return <IconSnowflake style={{ width: "75%", height: "75%" }} />;
       case 73:
-        return <ModerateSnowFall style={{ width: "100%", height: "100%" }} />;
+        return <IconSnowflake style={{ width: "75%", height: "75%" }} />;
       case 75:
-        return <HeavySnowFall style={{ width: "100%", height: "100%" }} />;
+        return <IconSnowflake style={{ width: "75%", height: "75%" }} />;
       case 77:
-        return <SnowGrains style={{ width: "100%", height: "100%" }} />;
+        return <IconCloudSnow style={{ width: "75%", height: "75%" }} />;
       case 80:
       case 81:
       case 82:
-        return <RainShowers style={{ width: "100%", height: "100%" }} />;
+        return <IconCloudRain style={{ width: "75%", height: "75%" }} />;
       case 85:
       case 86:
-        return <SnowShowers style={{ width: "100%", height: "100%" }} />;
+        return <IconCloudSnow style={{ width: "75%", height: "75%" }} />;
       case 95:
       case 96:
       case 99:
-        return <Thunderstorm style={{ width: "100%", height: "100%" }} />;
+        return <IconCloudBolt style={{ width: "75%", height: "75%" }} />;
       default:
         return null;
     }

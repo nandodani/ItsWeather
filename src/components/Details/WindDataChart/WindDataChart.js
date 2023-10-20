@@ -34,14 +34,16 @@ function WindDataChart() {
   }, []);
 
   const chartData = {
-    labels: windData ? Array.from({ length: windData.length }, (_, i) => {
-      const hour = (time + i) % 24;
-      return `${hour}h`;
-    }) : [],
+    labels: windData
+      ? Array.from({ length: windData.length }, (_, i) => {
+          const hour = (time + i) % 24;
+          return `${hour}h`;
+        })
+      : [],
     datasets: [
       {
         data: windData,
-        borderColor: "grey",
+        borderColor: "white",
         fill: false,
       },
     ],
@@ -80,14 +82,10 @@ function WindDataChart() {
   };
 
   return (
-    <IonCard>
-      <IonCardHeader>
-        <IonCardTitle className="card-title">Vento</IonCardTitle>
-      </IonCardHeader>
-      <IonCardContent>
-        <Line data={chartData} options={chartOptions} height={200} width={500} />
-      </IonCardContent>
-    </IonCard>
+    <>
+      <h3>Vento</h3>
+      <Line data={chartData} options={chartOptions} height={200} width={500} />
+    </>
   );
 }
 

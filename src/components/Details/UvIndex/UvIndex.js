@@ -25,7 +25,7 @@ function UVIndexCard() {
     apiData.hourly.uv_index[time];
 
   const getUVColor = (UVIndex) => {
-    let color = "black"; 
+    let color = "black";
     let label = "Desconhecido";
 
     switch (true) {
@@ -34,7 +34,7 @@ function UVIndexCard() {
         label = "Baixo";
         break;
       case UVIndex >= 3 && UVIndex < 6:
-        color = "yellow"; 
+        color = "yellow";
         label = "Moderado";
         break;
       case UVIndex >= 6 && UVIndex < 8:
@@ -46,11 +46,11 @@ function UVIndexCard() {
         label = "Muito Alto";
         break;
       case UVIndex >= 11 && UVIndex <= 12:
-        color = "purple"; 
+        color = "purple";
         label = "Extremo";
         break;
       default:
-        color = "black"; 
+        color = "black";
         label = "Desconhecido";
         break;
     }
@@ -61,23 +61,19 @@ function UVIndexCard() {
   const uvInfo = getUVColor(UVIndex);
 
   return (
-    <IonCard>
-      <IonCardHeader>
-        <IonCardTitle className="card-title">UV</IonCardTitle>
-      </IonCardHeader>
-      <IonCardContent>
-        <div
-          style={{
-            fontSize: "2rem",
-            fontWeight: "bold",
-            color: uvInfo.color,
-          }}
-        >
-          {UVIndex}
-        </div>
-        {uvInfo.label}
-      </IonCardContent>
-    </IonCard>
+    <>
+      <h3>UV</h3>
+      <div
+        style={{
+          fontSize: "2rem",
+          fontWeight: "bold",
+          color: uvInfo.color,
+        }}
+      >
+        {UVIndex}
+      </div>
+      {uvInfo.label}
+    </>
   );
 }
 

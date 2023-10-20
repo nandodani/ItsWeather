@@ -33,15 +33,15 @@ function InfoCard() {
       case 48:
         return "Nevoeiro gélido";
       case 51:
-        return "Chuvisco leve";
+        return "Chuviscos leves";
       case 53:
-        return "Chuvisco moderado";
+        return "Chuviscos moderados";
       case 55:
-        return "Chuvisco denso";
+        return "Chuviscos densos";
       case 56:
-        return "Chuvisco gélido leve";
+        return "Chuviscos gélidos leves";
       case 57:
-        return "Chuvisco gélido denso";
+        return "Chuviscos gélidos densos";
       case 61:
         return "Chuva fraca";
       case 63:
@@ -85,7 +85,7 @@ function InfoCard() {
 
   return (
     <>
-      <IonCardSubtitle>{weatherLabel}</IonCardSubtitle>
+      <div style={{color: "white"}}>{weatherLabel}</div>
     </>
   );
 }
