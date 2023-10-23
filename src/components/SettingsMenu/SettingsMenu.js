@@ -1,6 +1,5 @@
 import React from "react";
 import { IonItem, IonMenu, IonList, IonIcon } from "@ionic/react";
-import { settings } from 'ionicons/icons';
 
 
 const SettingsMenu = () => {
@@ -8,7 +7,6 @@ const SettingsMenu = () => {
     <IonMenu>
       <IonList>
         <IonItem>
-          <IonIcon name={settings} />
           Configurações
         </IonItem>
       </IonList>

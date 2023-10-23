@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { IonCardContent, IonGrid, IonRow, IonCol } from "@ionic/react";
 import { useApi } from "../../../utils/WeatherDataContext";
-import { IconCloud, IconCloudBolt, IconCloudFog, IconCloudRain, IconCloudSnow, IconSnowflake, IconSun } from "@tabler/icons-react";
-
+import {
+  IconCloud,
+  IconCloudBolt,
+  IconCloudFog,
+  IconCloudRain,
+  IconCloudSnow,
+  IconSnowflake,
+  IconSun,
+} from "@tabler/icons-react";
 
 function ForecastWeather() {
   const [temperatureData, setTemperatureData] = useState([]);
@@ -44,7 +51,6 @@ function ForecastWeather() {
     }
   }, [apiData, time]);
 
-  // Function to get the appropriate SVG based on weather code
   function getWeatherIcon(weatherCode) {
     switch (weatherCode) {
       case 0:
@@ -64,13 +70,9 @@ function ForecastWeather() {
       case 55:
         return <IconCloudRain style={{ width: "75%", height: "75%" }} />;
       case 56:
-        return (
-          <IconCloudRain style={{ width: "75%", height: "75%" }} />
-        );
+        return <IconCloudRain style={{ width: "75%", height: "75%" }} />;
       case 57:
-        return (
-          <IconCloudRain style={{ width: "75%", height: "75%" }} />
-        );
+        return <IconCloudRain style={{ width: "75%", height: "75%" }} />;
       case 61:
       case 62:
       case 63:
@@ -105,7 +107,10 @@ function ForecastWeather() {
     }
   }
 
-  const next6Hours = Array.from({ length: 6 }, (_, i) => `${i + 1 + time}h`);
+  const next6Hours = Array.from(
+    { length: 6 },
+    (_, i) => ((i + time) % 24) + "h"
+  );
 
   return (
     <IonCardContent>

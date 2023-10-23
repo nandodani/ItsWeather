@@ -55,14 +55,19 @@ ion-content {
   color: white;
 }
 
-.block {
+.settings-button{
   width: 100%;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: white;
+  background-color: black;
+  font-size: 18px;
+  font-weight: 900;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid white;
+  margin: 5px;
 }
 
-ion-modal {
-  --height: auto;
+.settings-button span{
+  font-size: 12px;
+  font-weight: 300;
 }

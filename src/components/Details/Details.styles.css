@@ -4,9 +4,32 @@ h2 {
   font-size: 2rem;
 }
 
-.title-details {
+.title-card-details {
   display: flex;
-  justify-content: center;
-  gap: 10px;
   align-items: center;
+  margin-bottom: 10px;
+  height: 14px;
+}
+
+.title-card-details svg {
+  height: 100%;
+}
+
+.title-card-details h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.card-details {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  padding: 20px 10px;
+}
+
+.content-card-details {
+  color: white;
+  font-size: 24px;
+  font-weight: 900;
+  text-align: center;
 }

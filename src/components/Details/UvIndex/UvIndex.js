@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useApi } from "../../../utils/WeatherDataContext";
 import { IconUvIndex } from "@tabler/icons-react";
 
-
 function UVIndexCard() {
   const apiData = useApi();
 
@@ -56,28 +55,26 @@ function UVIndexCard() {
 
   const uvInfo = getUVColor(UVIndex);
 
-
-
   return (
     <>
-      <div
-        id="open-modal"
-        className="title-details"
-      >
-        <IconUvIndex />
-        <h3>UV</h3>
+      <div className="card-details">
+        <div className="title-card-details">
+          <IconUvIndex />
+          <h3>UV</h3>
+        </div>
+        <div className="content-card-details">
+          <div
+            style={{
+              fontSize: "2rem",
+              fontWeight: "bold",
+              color: uvInfo.color,
+            }}
+          >
+            {UVIndex}
+          </div>
+          {uvInfo.label}
+        </div>
       </div>
-      <div
-        style={{
-          fontSize: "2rem",
-          fontWeight: "bold",
-          color: uvInfo.color,
-        }}
-      >
-        {UVIndex}
-      </div>
-      {uvInfo.label}
-
     </>
   );
 }

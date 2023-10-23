@@ -114,26 +114,30 @@ function ForecastWeather() {
 
   return (
     <>
-      <h3 className="title-details">
-        <IconCalendarDue /> Próximos 7 Dias
-      </h3>
-      <IonGrid style={{ width: "100%", textAlign: "center" }}>
-        <IonRow>
-          {next7Days.map((day, index) => (
-            <IonCol key={index}>{day}</IonCol>
-          ))}
-        </IonRow>
-        <IonRow>
-          {weatherCode.map((weatherCodeData, index) => (
-            <IonCol key={index}>{getWeatherIcon(weatherCodeData)}</IonCol>
-          ))}
-        </IonRow>
-        <IonRow>
-          {temperatureData.map((data, index) => (
-            <IonCol key={index}>{data}°</IonCol>
-          ))}
-        </IonRow>
-      </IonGrid>
+      <div className="card-details">
+        <div className="title-card-details">
+          <IconCalendarDue /> <h3>Próximos 7 Dias</h3>
+        </div>
+        <div>
+          <IonGrid style={{ width: "100%", textAlign: "center" }}>
+            <IonRow>
+              {next7Days.map((day, index) => (
+                <IonCol key={index}>{day}</IonCol>
+              ))}
+            </IonRow>
+            <IonRow>
+              {weatherCode.map((weatherCodeData, index) => (
+                <IonCol key={index}>{getWeatherIcon(weatherCodeData)}</IonCol>
+              ))}
+            </IonRow>
+            <IonRow>
+              {temperatureData.map((data, index) => (
+                <IonCol key={index}>{data}°</IonCol>
+              ))}
+            </IonRow>
+          </IonGrid>
+        </div>
+      </div>
     </>
   );
 }

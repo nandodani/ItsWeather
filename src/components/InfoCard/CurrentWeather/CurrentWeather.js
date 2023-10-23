@@ -2,7 +2,7 @@ import { IonCardSubtitle } from "@ionic/react";
 import { useApi } from "../../../utils/WeatherDataContext";
 import { useEffect, useState } from "react";
 
-function InfoCard() {
+function CurrentWeather() {
   const apiData = useApi();
   const [time, setTime] = useState(null);
 
@@ -90,4 +90,4 @@ function InfoCard() {
   );
 }
 
-export default InfoCard;
+export default CurrentWeather;

@@ -78,11 +78,20 @@ function WindDataChart() {
 
   return (
     <>
-      <div className="title-details">
-        <IconWind />
-        <h3>Vento</h3>
+      <div className="card-details">
+        <div className="title-card-details">
+          <IconWind />
+          <h3>Vento</h3>
+        </div>
+        <div className="content-card-details">
+          <Line
+            data={chartData}
+            options={chartOptions}
+            height={200}
+            width={500}
+          />
+        </div>
       </div>
-      <Line data={chartData} options={chartOptions} height={200} width={500} />
     </>
   );
 }
